@@ -5,16 +5,16 @@
             <div class="row">
                 <div class="col-12 col-sm-5 col-md-6">
                     <div class="header-top-left-menu">
-                        <span>Welcome to World Point Gems, Sri Lanka.</span>
+                        <span style="color:black">  Welcome to Orix Gems and Jewellers, Sri Lanka. </B></span>
                     </div>
                 </div>
                 <div class="col-12 col-sm-7 col-md-6">
                     <div class="header-top-right-menu">
                         <nav>
                             <ul>
-                                <li class="customer-menu"><a href="my-account.html"><i class="fa fa-user"></i> My Account</a></li>
+                                <!-- <li class="customer-menu"><a href="my-account.html"><i class="fa fa-user"></i> My Account</a></li> -->
 
-                                <li class=""><a href="cart.html"><i class="fa fa-shopping-cart "></i> My Bag</a>
+                            <!--    <li class=""><a href="cart.html"><i class="fa fa-shopping-cart "></i> My Bag</a>
                                     <div class="mini-cart">
                                         <div class="mini-cart-inner">
                                             <span class="minicart-close"><i class="material-icons">clear</i></span>
@@ -44,7 +44,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
+								
                                 <li class="customer-menu"><div id="google_translate_element"></div></li>
                             </ul>
                         </nav>
@@ -59,7 +60,7 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-3">
                     <div class="logo">
                         <a href="index.php">
-                            <img src="assets/img/logo3.png" alt="logo">
+                            <img src="assets/img/Orix Logo.png" alt="logo">
                         </a>
                     </div>
                     <div class="mobile-menu-area">
@@ -122,7 +123,40 @@
                         <nav>
                             <ul>
                                 <li><a href="index.php">Home</a></li>
-                                <li><a href="main_category.php?gc=1">Precious Gems</a>
+								       <li><a href="contact-us.php">Gems</a>
+								<ul>
+								<li><a href="#">Precious Gems</a>
+								<ul>
+                                        <?php
+                                        $sql = "SELECT * FROM subcategory WHERE maincategory=1";
+                                        $result = mysqli_query($conn, $sql);
+
+                                        while ($row = mysqli_fetch_array($result)) {
+                                            ?>
+                                            <li><a href="products.php?gc=<?php echo $row["mainCategory"]; ?>&gt=<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></a></li>
+                                            <?php
+                                        }
+                                        ?>
+                                    </ul>
+								</li>
+								<li><a href="#">Semi-Precious</a>
+								<ul>
+                                        <?php
+                                        $sql = "SELECT * FROM subcategory WHERE maincategory=1";
+                                        $result = mysqli_query($conn, $sql);
+
+                                        while ($row = mysqli_fetch_array($result)) {
+                                            ?>
+                                            <li><a href="products.php?gc=<?php echo $row["mainCategory"]; ?>&gt=<?php echo $row["id"]; ?>"><?php echo $row["name"]; ?></a></li>
+                                            <?php
+                                        }
+                                        ?>
+                                    </ul>
+								</li>
+								</ul>
+								
+								</li>
+                                <li><a href="main_category.php?gc=1">Necklaces / Chains</a>
                                     <ul>
                                         <?php
                                         $sql = "SELECT * FROM subcategory WHERE maincategory=1";
@@ -136,7 +170,7 @@
                                         ?>
                                     </ul>
                                 </li>
-                                <li><a href="main_category.php?gc=2">Precious Gems</a>
+                                <li><a href="main_category.php?gc=2">Bracelets</a>
                                     <ul>
                                         <?php
                                         $sql = "SELECT * FROM subcategory WHERE maincategory=2";
@@ -150,7 +184,7 @@
                                         ?>
                                     </ul>
                                 </li>
-                                <li><a href="main_category.php?gc=3">Jewellery</a>
+                                <li><a href="main_category.php?gc=3">Rings</a>
                                     <ul>
                                         <?php
                                         $sql = "SELECT * FROM subcategory WHERE maincategory=3";
@@ -164,9 +198,11 @@
                                         ?>
                                     </ul>
                                 </li>
-                                <li><a href="buying-guide.php">Buying Guide</a></li>
-                                <li><a href="about-us.php">About</a></li>
-                                <li><a href="contact-us.php">Contact</a></li>
+                                <li><a href="buying-guide.php">EarRings</a></li>
+                                <li><a href="about-us.php">Pendents</a></li>
+								<li><a href="contact-us.php">Sets</a></li>
+								<li><a href="about-us.php">About Us</a></li>
+							
                             </ul>
                         </nav>
                     </div>

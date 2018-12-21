@@ -3,7 +3,7 @@
     <div class="newsletter-area-color3 newsletter-area"></div>
     <!-- End footer line  -->
     <!-- Start footer our services area  -->
-    <div class="footer-ourservice">
+   <!-- <div class="footer-ourservice">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-3">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>  -->
     <!-- End footer our services area  -->
     <!-- start footer middle -->
     <div class="footer-middle">
@@ -62,11 +62,11 @@
                     <div class="footer-about-us">
                         <div class="logo-footer">
                             <a href="index.php">
-                                <img src="assets/img/logo3.png" alt="footer logo">
+                                <img src="assets/img/footerLogo.png" alt="footer logo">
                             </a>
                         </div>
                         <div class="footer-content">
-                            <p>World Point Gems is one of the country’s largest and most respected gems and jewellery manufacturers.</p>
+                            <p>Orix Gems and Jewellery Merchant is one of the country’s largest and most respected gems and jewellery manufacturers.</p>
 
                             <div class="footer-social">
                                 <ul>
@@ -107,15 +107,18 @@
                     <div class="footer-menu">
                         <h4>Opening Hours</h4>
                         <ul>
-                            <li><strong>Sales</strong>: 9.00 AM - 5.00 PM</li>
-                            <li><strong>Support</strong>: 9.00 AM - 5.00 PM</li>
+                            <li><strong>Sales</strong>: 9.00 AM - 9.00 PM</li>
+                            <li><strong>Support</strong>: 9.00 AM - 9.00 PM</li>
                         </ul>
                         </br>
                         <h4>Contact Us</h4>
                         <ul>
-                            <li>Wijerama Mawatha, Colombo, Sri Lanka.</li>
-                            <li>Tel: +94 071 285 9542</li>
-                            <li>Fax: +94 071 285 9542</li>
+                            <li>P.O. Box 33,</li>
+                            <li>Hotel Road, Mt. Lavinia,Sri Lanka.</li>
+                            <li>Tel: 0094 11 2716039</li>
+                            <li>Fax: 0094 11 2712596</li>
+                            <li>Cartel: 0094 71 4868403</li>
+                            <li>Mailbox: nraneweera@sltnet.lk</li>
                         </ul>
                     </div>
                 </div>
@@ -128,7 +131,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="copyright-text">
-                        <p>&copy; 2018 World Point Gems. All rights reserved. Developed by <a href="http://syncleaps.com/" target="_blank">SyncLeaps</a></p>
+                        <p>&copy; 2018 Orix Gems and Jewellers. All rights reserved. Developed by <a href="http://syncleaps.com/" target="_blank">SyncLeaps</a></p>
                     </div>
                 </div>
             </div>

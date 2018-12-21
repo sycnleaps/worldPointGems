@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-require_once("wp_admin_panel/db.php");
+require_once("orix_admin_panel/db.php");
 
 $gem_category = $_GET["gc"];
 $gem_type = $_GET["gt"];
