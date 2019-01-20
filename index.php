@@ -38,35 +38,17 @@ require_once("orix_admin_panel/db.php");
             <!-- Start Slider area -->
             <section class="slider-style-3 slider-area">
 				<div class="slider-active owl-carousel">
-				  <div class="single-slide" style="background-image:url('assets/img/slider/home3_1.jpg');"> 
+				  <div class="single-slide" style="background-image:url('assets/img/slider/home3_2.png');"> 
 					<div class="container">
 						<div class="row">
+						
 							<div class="col-sm-10 col-md-6">
 								<div class="slider-content">
-									<h2 style="color: #ffffff">
-										<strong>Connecting the finest Ceylon gems to the World<br></strong>
+									<h2 style="font-family: Retro; color: #ffffff;">
+										<strong>Jewellery handcrafted to perfection<br></strong>
 									</h2>
-									<h4>
-										Sri Lanka the Sapphire Capital.
-									</h4>
-									<div class="slider-button default-button">
-										<a href="products.php">View All</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				  </div>
-				  <div class="single-slide" style="background-image:url('assets/img/slider/home3_2.jpg');">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-10 col-md-6">
-								<div class="slider-content">
-									<h2 style="color: #ffffff">
-										<strong>We brings you the highest quality natural gems</strong>
-									</h2>
-									<h3 style="color: #b9b8b8">
-										Choose the gemstone which suits you!
+									<h3 style="font-family: Retro; color:#ffffff;">
+										<i>Come and design your dreams!</i>
 									</h3>
 									<div class="slider-button default-button">
 										<a href="products.php">View All</a>
@@ -76,17 +58,39 @@ require_once("orix_admin_panel/db.php");
 						</div>
 					</div>
 				  </div>
-					<div class="single-slide" style="background-image:url('assets/img/slider/home3_3.jpg');">
+				  <div class="single-slide" style="background-image:url('assets/img/slider/home3_1.png');">
 					<div class="container">
 						<div class="row">
 							<div class="col-sm-10 col-md-6">
 								<div class="slider-content">
-									<h2 style="color: #ffffff">
-										<strong>Beautiful Handcrafted Jewellery for your Gemstones!</strong>
+									<h2 style="font-family: Retro; color: black">
+										<strong>Bringing to you the highest quality natural gems</strong>
 									</h2>
-									<h3 style="color: #b9b8b8">
-										Choose the gemstone which suits you!
+									<h3 style="font-family: Retro;color: black">
+										<i>Pure, genuine, rare!</i>
 									</h3>
+									<div class="slider-button default-button">
+										<a href="products.php">View All</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				  </div>
+					<div class="single-slide" style="background-image:url('assets/img/slider/home3_3.png');">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-10 col-md-6">
+								<div class="slider-content">
+								<h2 style="font-family: Retro; color: #ffffff">
+										<strong>Indulge in beauty, brilliance and style</strong>
+									</h2>
+									<h3 style="font-family: Retro;color: #ffffff">
+										<i>unique, as you...</i>
+									</h3>
+									<h2 style="font-family: Retro; color: #ffffff;">
+										<strong></strong>
+									</h2>
 									<div class="slider-button default-button">
 										<a href="products.php">View All</a>
 									</div>
@@ -102,13 +106,13 @@ require_once("orix_admin_panel/db.php");
 			<section class="shop-by-category-2 shop-by-category">
 				<div class="container ">
 					<div class="section-title section-title-style1">
-						<h2>POPULAR GEMSTONES</h2>
+						<h2 style="font-family: Retro;">BIRTH STONES</h2>
 					</div>
 
 					<div class="wrap-border">
 						<div class="row">
 							<?php
-							$sql = "SELECT * FROM subcategory WHERE popular_gem=1 LIMIT 8";
+							$sql = "SELECT * FROM subcategory WHERE mainCategory=11 LIMIT 12";
 							$result = mysqli_query($conn, $sql);
 
 							while ($popular_gem_row = mysqli_fetch_array($result)) {
@@ -116,11 +120,12 @@ require_once("orix_admin_panel/db.php");
 								<div class="col-12 col-sm-6 col-md-6 col-lg-3">
 									<div class="single-shop-by-category">
 										<div class="focus-img shop-by-cat-images">
-											<a href="products.php?gc=<?php echo $popular_gem_row["mainCategory"]; ?>&gt=<?php echo $popular_gem_row["id"]; ?>"><img src="<?php echo $popular_gem_row["image"]; ?>" alt="<?php echo $popular_gem_row['name']; ?>"></a>
+											<a href="#"=<?php echo $popular_gem_row["mainCategory"]; ?>&gt=<?php echo $popular_gem_row["id"]; ?>"><img src="<?php echo $popular_gem_row["image"]; ?>" alt="<?php echo $popular_gem_row['name']; ?>"></a>
 										</div>
 										<div class="shop-by-cat-content">
-											<h3><?php echo $popular_gem_row['name']; ?></h3>
-											<p><?php echo $popular_gem_row['small_description']; ?></p>
+											<h3  style="font-family:Retro;"><?php echo $popular_gem_row['month']; ?></h3>
+											<i><h6 style="font-family:Retro;"><?php echo $popular_gem_row['name']; ?></h6></i>
+											<p style="font-family:Retro;"><?php echo $popular_gem_row['small_description']; ?></p>
 										</div>
 									</div>
 								</div>
@@ -139,17 +144,19 @@ require_once("orix_admin_panel/db.php");
             		<div class="row">
             			<div class="col-12 col-sm-4">
             				<div class="banner-add single-three-column-banner">
-            					<a href="buying-guide.php"><img src="assets/img/banner/banner-1.jpg" alt="Gem Buying Guide"></a>
+            					<a href="https://www.youtube.com/channel/UCcUaFhWqkcWu9oEwnKcG8Uw"><img src="assets/img/banner/banner-1.jpg" alt="Award"></a>
             				</div>
             			</div>
+            			
             			<div class="col-12 col-sm-4">
             				<div class="banner-add single-three-column-banner">
-            					<a href="http://www.ngja.gov.lk/en/gemstones-found-in-sri-lanka" target="_blank"><img src="assets/img/banner/banner-2.jpg" alt="Gems of Sri Lanka"></a>
+            					<a href="coming-soon.php"><img src="assets/img/banner/banner-2.jpg" alt="Handcrafted Jewelry Designs"></a>
             				</div>
             			</div>
-            			<div class="col-12 col-sm-4">
+						
+						<div class="col-12 col-sm-4">
             				<div class="banner-add single-three-column-banner">
-            					<a href="products.php"><img src="assets/img/banner/banner-3.jpg" alt="Handcrafted Jewelry Designs"></a>
+            					<a href="http://www.ngja.gov.lk/en/gemstones-found-in-sri-lanka" target="_blank"><img src="assets/img/banner/banner-3.jpg" alt="Gems of Sri Lanka"></a>
             				</div>
             			</div>
             		</div>
@@ -158,11 +165,11 @@ require_once("orix_admin_panel/db.php");
             <!-- End three column banner  -->
 
             <!-- Start hot deal area  -->
-            <section class="hot-deal-3 hot-deal">
+            <!--  <section class="hot-deal-3 hot-deal">
             	<div class="container">
             		<div class="row">
             			<div class="col-12 col-md-12 col-lg-4 col-xl-3">
-	            			<!-- start new products -->
+	            			<!-- start new products 
 	            			<div class="single-sidebar">
 	            				<div class="home3-hot-deal hot-deal-product-wrapper">
 									<div class="section-title section-title-color3">
@@ -201,7 +208,7 @@ require_once("orix_admin_panel/db.php");
 	            					</div>
 	            				</div>         						
 	            			</div>	
-	            			<!-- end new products -->
+	            			<!-- end new products
             			</div>        
             			
             			<div class="col-12 col-md-12 col-lg-8 col-xl-9">
@@ -242,7 +249,7 @@ require_once("orix_admin_panel/db.php");
             		</div>
             	</div>
             </section>
-            <!-- End hot deal area  -->
+            <!-- End hot deal area  --> 
 
 			<!-- Start jewelry with image  -->
 			<div class="product-carousel-with-image">
@@ -255,18 +262,18 @@ require_once("orix_admin_panel/db.php");
 						</div>
 						<div class="col-12 col-sm-12 col-md-8 col-lg-7">
 							<div class="section-title section-title-style1 section-title-border">
-								<h2>Exclusive Jewellery</h2>
+								<h2 style="font-family: Retro;">Exclusive Jewellery</h2>
 							</div>
 							<div class="cat-slider1 product-grid-wrapper">
 								<?php
-								$sql = "SELECT * FROM subcategory WHERE exclusive_jewellery=1";
+								$sql = "SELECT * FROM product WHERE gem_category IN ('1', '2', '3')";
 								$result = mysqli_query($conn, $sql);
 
 								while ($exclusive_jewellery_row = mysqli_fetch_array($result)) {
 									?>
 									<div class="single-grid-product">
 										<div class="grid-product-image">
-											<a href="products.php?gc=<?php echo $exclusive_jewellery_row["mainCategory"]; ?>&gt=<?php echo $exclusive_jewellery_row["id"]; ?>"><img src="<?php echo $exclusive_jewellery_row["image"]; ?>" alt="<?php echo $exclusive_jewellery_row['name']; ?>"></a>
+											<a href="products.php?gc=<?php echo $exclusive_jewellery_row["mainCategory"]; ?>&gt=<?php echo $exclusive_jewellery_row["id"]; ?>"><img src="<?php echo $exclusive_jewellery_row["image1"]; ?>" alt="<?php echo $exclusive_jewellery_row['name']; ?>"></a>
 										</div>
 										<div class="grid-product-info">
 											<a href="products.php?gc=<?php echo $exclusive_jewellery_row["mainCategory"]; ?>&gt=<?php echo $exclusive_jewellery_row["id"]; ?>"><?php echo $exclusive_jewellery_row['name']; ?></a>
@@ -276,9 +283,9 @@ require_once("orix_admin_panel/db.php");
 								}
 								?>
 							</div>
-							<div class="category-btn default-button">
+							<!-- <div class="category-btn default-button">
 								<a href="#">All Jewellers</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>

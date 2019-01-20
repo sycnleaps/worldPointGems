@@ -66,14 +66,14 @@
                             </a>
                         </div>
                         <div class="footer-content">
-                            <p>Orix Gems and Jewellery Merchant is one of the country’s largest and most respected gems and jewellery manufacturers.</p>
+                            <p>Gem and Jewellery Merchant Gem cutting, old coins, Gift Items and Handy Craft....</p>
 
                             <div class="footer-social">
                                 <ul>
-                                    <li class="facebook"><a href="https://www.facebook.com/WORLD-POINT-GEMS-994516347233874/"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="facebook"><a href="https://www.facebook.com/Illuminate-Gems-Jewellery-128317727803781/"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="instagram"><a href="https://www.instagram.com/orix.gems/?hl=en"><i class="fa fa-instagram"></i></a></li>
                                     <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="youtube"><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                    <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li class="youtube"><a href="https://www.youtube.com/channel/UCcUaFhWqkcWu9oEwnKcG8Uw"><i class="fa fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -83,10 +83,10 @@
                     <div class="footer-menu">
                         <h4>Brand Profile</h4>
                         <ul>
-                            <li><a href="about-us.php">About Us</a></li>
-                            <li><a href="coming-soon.html">Our Designs</a></li>
-                            <li><a href="coming-soon.html">Blog</a></li>
-                            <li><a href="coming-soon.html">Reviews</a></li>
+							<li><a href="about-us.php">About Us</a></li>
+							<li><a href="contact-us.php">Find Our Location</a></li>
+                            <li><a href="coming-soon.php">Blog</a></li>
+                            <li><a href="coming-soon.php">Awards and certifications</a></li>  
                         </ul>
                     </div>
                 </div>
@@ -94,12 +94,9 @@
                     <div class="footer-menu">
                         <h4>Help</h4>
                         <ul>
-                            <li><a href="coming-soon.html">Payment</a></li>
-                            <li><a href="coming-soon.html">Shipping Policy</a></li>
-                            <li><a href="coming-soon.html">Customs & Duties</a></li>
-                            <li><a href="coming-soon.html">Ring Size Guide</a></li>
-                            <li><a href="coming-soon.html">Terms & conditions</a></li>
-                            <li><a href="coming-soon.html">Privacy Policy</a></li>
+                            <li><a href="coming-soon.php">Payment</a></li>
+                            <li><a href="coming-soon.php">After Sales Service</a></li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -108,17 +105,15 @@
                         <h4>Opening Hours</h4>
                         <ul>
                             <li><strong>Sales</strong>: 9.00 AM - 9.00 PM</li>
-                            <li><strong>Support</strong>: 9.00 AM - 9.00 PM</li>
                         </ul>
                         </br>
                         <h4>Contact Us</h4>
-                        <ul>
+                        <ul> 
                             <li>P.O. Box 33,</li>
                             <li>Hotel Road, Mt. Lavinia,Sri Lanka.</li>
-                            <li>Tel: 0094 11 2716039</li>
-                            <li>Fax: 0094 11 2712596</li>
-                            <li>Cartel: 0094 71 4868403</li>
-                            <li>Mailbox: nraneweera@sltnet.lk</li>
+                            <li>Phone: 0094-11-2716039</li>
+                            <li>Mobile: 0094-71-4868403</li>
+                            <li>Mailbox: nimalranaweera15@gmail.com</li>
                         </ul>
                     </div>
                 </div>

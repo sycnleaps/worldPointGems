@@ -43,8 +43,8 @@ require_once("orix_admin_panel/db.php");
             			<div class="col-12 col-sm-12">
             				<div class="korando-breadcrump">
 								<ul>
-									<li><a href="index.php" title="Go to Home Page">Home</a></li>
-									<li>About Us</li>
+									<li style="font-family: Retro;"><a href="index.php" title="Go to Home Page">Home</a></li>
+									<li style="font-family: Retro;">About Us</li>
 								</ul>
             				</div>
             			</div>
@@ -60,7 +60,7 @@ require_once("orix_admin_panel/db.php");
 						<div class="col-12 col-sm-12">
 							<div class="main-content">
 								<div class="section-title section-title-style1">
-									<h2>About Us</h2>
+									<h2 style="font-family: Retro;">About Us</h2>
 								</div>
 							</div>
 						</div>
@@ -70,27 +70,23 @@ require_once("orix_admin_panel/db.php");
 						<div class="row">
 							<div class="col-12 col-lg-7">
 								<div class="about-content1">
-									<h3>Orix Gems and Jewellers</h3>
+									<h3 style="font-family: Retro;">Orix Gems and Jewellers</h3>
 									
 									<p>From a long line of heritage since the early 70s to today, "Orix" Gems and Jewellers has not failed to satisfy our customers from around the world with our vast and colorful collection of gems and jewelry. Our one purpose is to provide the finest products and dazzle the industry of fashion and expectation; products that come from their unique sources of creation that we and only we have strived to accomplish.</p>
-<p>Our gems reach a variety of precious and semi-precious stones from quartz to sapphires, each with diverse shades of color and size as desired. Among other mines in Sri Lanka, the depths of Palmadulla, Kuruvita and Ratnapura, These beautiful arenas have given birth to the majority of the gems we possess today. We also trade in casting and hand crafted jewelry by expert craftsmen resulting in the hallmark of quality that has travelled down decades, exclusive for products and services offered by our company only.</p>
-<p>We have been able to stun our customers, who remain loyal to us as of today, with designs that reflect beauty, luster, desirability and perfection. We recognize that with gems and jewellery, not only do people bring in value to their lives but deep emotion with each hand crafted and carefully designed piece that is meant to last forever. To our customers, choosing us was not an option but a choice made to cherish till the end of time, just like the commitment we promise to undertake with the nod of approval.</p>
-<p>"Orix" Gems and Jewellery are catered to the Asian as well as Western markets.</p>
-<p>It is with great pleasure that we welcome you to trade with our dedicated team of committed employees and our founder and CEO Nimal Ranaweera.</p>
-<p>Nimal's thirty years experience in the field and his unique talent adds value to "Orix" Gems and Jewellery.</p>
-
-<h3>Our Founder</h3>
-<p>Our CEO and Founder of Orix Gems and Jewellers, Nimal Ranaweera, a father of two and a mentor to many,  has a great taste in the trade of gems and jewelry and has been a loyal businessman exceeding 35 years.</p>
-<p>His eye for fashion and talent has not only increased with time but has acquired a great sense of practicability.</p>
-<p>His vision of 35 years ago to create a company which produces irresistible products and exceptionally good service has resulted in this passionate earning and this dedicated success was born.</p>
-
-
-
-
-
-
+									<p>Our gems reach a variety of precious and semi-precious stones from quartz to sapphires, each with diverse shades of color and size as desired. Among other mines in Sri Lanka, the depths of Palmadulla, Kuruvita and Ratnapura, have given birth to the majority of the gems we possess today. We also trade in casting and hand crafted jewelry by expert craftsmen resulting in the hallmark of quality that has travelled down decades, exclusive for products and services offered by our company only.</p>
+									<p>We have been able to stun our customers, who remain loyal to us, with designs that reflect beauty, luster, desirability and perfection. We recognize that with gems and jewellery, not only do people bring in value to their lives but deep emotion with each hand crafted and carefully designed piece that is meant to last forever. To our customers, choosing us was not an option but a choice made to cherish till the end of time, just like the commitment we promise to undertake with the nod of approval.</p>
+									<p>"Orix" Gems and Jewellers is catered to the Asian as well as Western markets.</p>
+									<p>It is with great pleasure that we welcome you to trade with our dedicated team of committed employees and our founder and CEO Nimal Ranaweera.</p>
+									<p>Orix Gems and Jewellers has been winning various awards in the Jewels Gemologists Association Competition since 2012. Our Company also won the Gold Award at the Presidential Awards 2018 for the Best Silver Jewellery Item.</p>
+									<p>Nimal's thirty years of experience in the field and his unique talent adds value to "Orix" Gems and Jewellers.</p>
 									
-
+									<h3 style="font-family: Retro;">Mount Lavinia</h3>
+									
+								<p>	Being the main branch of the Orix Gems and Jewellers business chain, this is located in the heart of Mt Lavinia, the most famous heritage city for foreigners. This is a must visit place if you want to own genuine natural Sri Lankan Gems or handcrafted jewellery. Gem oriented pictures, Sri Lankan ancient coins, watches and many more can be found in this main branch. Safety is fully assured and customers are warmly welcomed by our highly qualified and friendly staff.</p>
+<h3 style="font-family: Retro;">Our Founder</h3>
+<p>Our CEO and Founder of Orix Gems and Jewellers, Nimal Ranaweera, a father of two and a mentor to many,  has a great taste in the trade of gems and jewelry and has been a loyal businessman exceeding 35 years.</p>
+<p>His eye for fashion and talent, being a qualified gem cutter and colour grading expert, has not only increased with time but has acquired a great sense of practicability.</p>
+<p>His vision of 35 years ago to create a company which produces irresistible products and exceptionally good service has resulted in this passionate earning and a dedicated success was born.</p>
 								</div>
 							</div>
 							<div class="col-12 col-lg-5">

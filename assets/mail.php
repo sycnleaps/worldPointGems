@@ -19,10 +19,10 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "champakad94@gmail.com";
+        $recipient = "pgrasanka@gmail.com";
 
         // Set the email subject.
-        $subject = "New message! World Point Gems";
+        $subject = "New message! Welcome to Orix Gems and Jewellers, Sri Lanka.";
 
         // Build the email content.
         $email_content = "Name: $name\n";

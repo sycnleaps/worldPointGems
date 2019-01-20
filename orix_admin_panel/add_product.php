@@ -11,20 +11,15 @@ if(isset($_POST['addProduct'])) {
 		$gem_of_the_day = $_POST["gem_of_the_day"];
 		$recent_product = $_POST["recent_product"];
 		$name = $_POST["name"];
+		$item_code = $_POST["item_code"];
 		$small_description = $_POST["small_description"];
 		$long_description = $_POST["long_description"];
 		$price = $_POST["price"];
 		$offer_price = $_POST["offer_price"];
 		$availability = $_POST["availability"];
-		$sku = $_POST["sku"];
-		$origin = $_POST["origin"];
-		$dimensions = $_POST["dimensions"];
 		$treatment = $_POST["treatment"];
 		$color = $_POST["color"];
-		$weight = $_POST["weight"];
-		$certification = $_POST["certification"];
-		$shape = $_POST["shape"];
-		$cut = $_POST["cut"];
+		$pieces = $_POST["pieces"];
 		$now = date('Y-m-d H:i:s');
 
 		// FILE UPLOAD
@@ -32,20 +27,7 @@ if(isset($_POST['addProduct'])) {
 		$target_upload_dir = "assets/img/".$gem_category."/";
 		$expensions= array("jpeg","jpg","png", "mp3", "mp4", "wma");
 
-		// VIDEO
-		$file_name_video = $_FILES['video']['name'];
-		$file_size_video =$_FILES['video']['size'];
-		$file_tmp_video =$_FILES['video']['tmp_name'];
-		$file_type_video =$_FILES['video']['type'];
-		$file_ext_video =strtolower(end(explode('.',$_FILES['video']['name'])));
-
-		if(in_array($file_ext_video,$expensions)=== false){
-			$errors[]="Extension not allowed, please choose a MP4 file.";
-		}
-
-		if($file_size_video > 2097152){
-			$errors[]='File size must be excately 2 MB';
-		}
+		
 
 		// IMAGE 01
 		$file_name1 = $_FILES['image1']['name'];
@@ -125,14 +107,14 @@ if(isset($_POST['addProduct'])) {
 		$gem_name = str_replace(' ', '_', $name);
 		$time_stamp = time();
 
-		$video_location = $target_upload_dir . $gem_name . $time_stamp . basename($file_name_video);
+	
 		$image1_location = $target_upload_dir . $gem_name . $time_stamp . basename($file_name1);
 		$image2_location = $target_upload_dir . $gem_name . $time_stamp . basename($file_name2);
 		$image3_location = $target_upload_dir . $gem_name . $time_stamp . basename($file_name3);
 		$image4_location = $target_upload_dir . $gem_name . $time_stamp . basename($file_name4);
 		$image5_location = $target_upload_dir . $gem_name . $time_stamp . basename($file_name5);
 
-		move_uploaded_file($file_tmp_video, "../" . $video_location);
+	
 		move_uploaded_file($file_tmp1, "../" . $image1_location);
 		move_uploaded_file($file_tmp2, "../" . $image2_location);
 		move_uploaded_file($file_tmp3, "../" . $image3_location);
@@ -175,7 +157,7 @@ if(isset($_POST['addProduct'])) {
 //		echo ",NOW-" . $now;
 
 
-		$sql = "INSERT INTO product (gem_category, gem_type, gem_of_the_day, recent_product, name, small_description, long_description, price, offer_price, availability, sku, origin, dimensions, treatment, color, weight, certification, shape, cut, video, image1, image2, image3, image4, image5, created_date, updated_date) VALUES ('$gem_category','$gem_type','$gem_of_the_day','$recent_product','$name','$small_description','$long_description','$price','$offer_price','$availability','$sku','$origin','$dimensions','$treatment','$color','$weight','$certification','$shape','$cut','$video_location','$image1_location','$image2_location','$image3_location','$image4_location','$image5_location','$now','$now')";
+		$sql = "INSERT INTO product (gem_category, gem_of_the_day, recent_product, item_code ,name, small_description, long_description, price, offer_price, availability , color, pieces , image1, image2, image3, image4, image5, created_date, updated_date) VALUES ('$gem_category','$gem_of_the_day','$recent_product', '$item_code' ,'$name','$small_description','$long_description','$price','$offer_price','$availability','$color','$pieces' ,'$image1_location','$image2_location','$image3_location','$image4_location','$image5_location','$now','$now')";
 		mysqli_query($conn, $sql);
 		$current_id = mysqli_insert_id($conn);
 		if (!empty($current_id)) {
@@ -196,7 +178,7 @@ if(isset($_POST['addProduct'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Admin Panel - World Point Gems</title>
+	<title>Admin Panel - Orix Gems and Jewellers</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="">
@@ -360,8 +342,17 @@ if(isset($_POST['addProduct'])) {
 
 											<!-- Title -->
 											<div class="row with-forms">
+												<div class="col-md-6">
+													<h5>Product Code <i class="tip" data-tip-content="Reference Number of the Item"></i></h5>
+													<input class="search-field" type="text" name="item_code" value=""/>
+												</div>
+											</div>
+											
+											
+											<!-- Title -->
+											<div class="row with-forms">
 												<div class="col-md-12">
-													<h5>Product Name <i class="tip" data-tip-content="Name of the Gem"></i></h5>
+													<h5>Product Name <i class="tip" data-tip-content="Name of the Item"></i></h5>
 													<input class="search-field" type="text" name="name" value=""/>
 												</div>
 											</div>
@@ -377,21 +368,6 @@ if(isset($_POST['addProduct'])) {
 													$result = mysqli_query($conn, $sql);
 
 													echo "<select name='gem_category'>";
-													while ($row = mysqli_fetch_array($result)) {
-														echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
-													}
-													echo "</select>";
-													?>
-												</div>
-
-												<!-- Type -->
-												<div class="col-md-6">
-													<h5>Product Type</h5>
-													<?php
-													$sql = "SELECT * FROM subcategory";
-													$result = mysqli_query($conn, $sql);
-
-													echo "<select name='gem_type'>";
 													while ($row = mysqli_fetch_array($result)) {
 														echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
 													}
@@ -445,16 +421,52 @@ if(isset($_POST['addProduct'])) {
 
 											</div>
 											<!-- Row / End -->
+											
+										
+											
+											
+											
+												<!-- Website -->
+												
 										</div>
 										<!-- Section / End -->
+										
+										<div class="row with-forms">
+
+												<!-- Phone -->
+												
+											
+
+											
+											</div>
 <!-- Section -->
 										<div class="add-listing-section">
 
 											<!-- Headline -->
 											<div class="add-listing-headline">
 												<h3><i class="sl sl-icon-docs"></i> Details</h3>
+												
+												
+
 											</div>
 
+											
+												<div class="row with-forms">
+												<div class="col-md-4">
+													<h5>Colour</h5>
+													<input type="text" name="color">
+												</div>
+												
+												
+													<div class="col-md-4">
+													<h5>Pieces</h5>
+													<input type="text" name="pieces">
+												</div>
+												
+													
+											</div>
+											
+											
 											<!-- Description -->
 											<div class="form">
 												<h5>Small Description</h5>
@@ -465,77 +477,10 @@ if(isset($_POST['addProduct'])) {
 												<h5>Long Description</h5>
 												<textarea class="WYSIWYG" name="long_description" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
 											</div>
-
-														<!-- Row -->
-											<div class="row with-forms">
-
-												<!-- Phone -->
-												<div class="col-md-4">
-													<h5>SKU</h5>
-													<input type="text" name="sku">
-												</div>
-
-												<!-- Website -->
-												<div class="col-md-4">
-													<h5>Origin</h5>
-													<input type="text" name="origin">
-												</div>
-
-												<!-- Email Address -->
-												<div class="col-md-4">
-													<h5>Dimensions</h5>
-													<input type="text" name="dimensions">
-												</div>
-
-											</div>
+											
 											<!-- Row / End -->
 
-																						<!-- Row -->
-											<div class="row with-forms">
-
-												<!-- Phone -->
-												<div class="col-md-4">
-													<h5>Treatment</h5>
-													<input type="text" name="treatment">
-												</div>
-
-												<!-- Website -->
-												<div class="col-md-4">
-													<h5>Colour</h5>
-													<input type="text" name="color">
-												</div>
-
-												<!-- Email Address -->
-												<div class="col-md-4">
-													<h5>Weight</h5>
-													<input type="text" name="weight">
-												</div>
-
-											</div>
-											<!-- Row / End -->
-
-											<div class="row with-forms">
-
-												<!-- Phone -->
-												<div class="col-md-4">
-													<h5>Certification</h5>
-													<input type="text" name="certification">
-												</div>
-
-												<!-- Website -->
-												<div class="col-md-4">
-													<h5>Shape</h5>
-													<input type="text" name="shape">
-												</div>
-
-												<!-- Email Address -->
-												<div class="col-md-4">
-													<h5>Cut</h5>
-													<input type="text" name="cut">
-												</div>
-
-											</div>
-											<!-- Row / End -->
+											
 										</div>
 										<!-- Section / End -->
 											<!-- Section -->
@@ -543,14 +488,7 @@ if(isset($_POST['addProduct'])) {
 											<!-- Headline -->
 											<div class="add-listing-headline">
 												<h3><i class="sl sl-icon-picture"></i> Gallery</h3>
-											</div>
-											<div class="row with-forms">
-												<!-- Phone -->
-												<div class="col-md-6">
-													<h5>Video <span>(.MP4)</span></h5>
-													<input type="file" name="video" />
-												</div>
-											</div>
+											</div>	
 											<div class="row with-forms">
 												<!-- Phone -->
 												<div class="col-md-4">

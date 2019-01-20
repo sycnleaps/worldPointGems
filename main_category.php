@@ -16,7 +16,7 @@ if(isset($gem_category)) {
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>World Point Gems</title>
+		<title>Orix Gems and Jewellers</title>
         <meta name="description" content="World Point Gems is a Global Supplier of responsibly sourced loose gemstones, and colored gem studded jewelry. We strive to provide a unique quality experience online that though exists in other ecommerce segments, is often found to be elusive in the gems and jewelry segment. World Point Gems specializes in the Mining & Marketing of Natural Colored Gems Stones, both Precious stones and Semi-precious stones. We are a young, dynamic company and support raw emerging talent wherever possible, working with cutting-edge designers as well as some of the most iconic brands.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="keywords" content="gems, srilanka, worldpointgems, ceylongems, srilankagems, worldgems, gem, bluesapphire, stones, Word point holdings, World point,Worlpoint gems,gem,gem srilanka,best gems sri lanka,natural gem stone,natural gem srilanka,Gemstone,Best gemstone,Heated gem,treated gem,Best gemstone srilanka ,Best gemstone Italy,Natural gemstone,natural gemstone,Precious stone,Precious stone srilanka, brazil, Thailand, india, mosambique, afica, madagscar, Burma, kashmir, Semi precious stone,Minerals,rock and mineral,Mining,Gem mining,Gem bit,Gem auction,Gem mines,Gem mine Sri Lanka,Gem,Sapphire,Srilankan sapphire,Srilankan blue sapphire,Padmaracha ,gewuda,diamond,diamond business,dimond sri lanka,dimond Italy,Ceylon blue sapphire,Ceylon,gem cutting,gem cutting sri lanka,Gem cutting Italy,juwellery making srilanka, jwellery making Italy,Best gems,Quality gems,Certified gems,valuble gems,gem with certificate srilanka,gem certificate,Natural cheapest gem,Srilanka,Srilankan gems,Best Srilankan gems,Natural Srilanka gems,Certified Srilankan gem,Quality gem srilanka,Natural cheapest gem srilanka,Gem business,Gem business srilanka,Gem dealer,Best gem dealer,Gem dealer Srilanka,Gem fair,Gem fair srilanka,Gem and jewelry, jewelry design,watch,necklace,pendant,ring,bracelet,Earing">
@@ -65,14 +65,31 @@ if(isset($gem_category)) {
             		<div class="row flex-row-reverse">
             			<div class="col-12 col-md-12 col-lg-12">
 							<div class="main-content">
-								<div class="shop-page-header" style="background-image:url('assets/img/banner/bg_shop.jpg'); background-repeat: no-repeat">
+							
+							
+									
+									
+									
+									
+						<?php
+$gem_category = 'assets/img/banner/bg_shop';
+$gem_category =  $gem_category.$_GET["gc"];
+$gem_category = $gem_category.'.jpg';
+						
+
+						
+?>
+
+<div class="shop-page-header" style="background-image:url('<?php echo $gem_category; ?>'); background-repeat: no-repeat">
 									<div class="col-12 col-lg-10">
 										<div class="product-about-content">
-											<h4><?php echo $gem_category_row['name']; ?></h4>
-											<p><?php echo $gem_category_row['description']; ?></p>
 										</div>
 									</div>
 								</div>
+
+										</div>
+									</div>
+								</div>	
 								<div class="shop-page-product-area">
 									<div class="shop-page-product-shorting section-title-border">
 										<div class="product-shorting-bar">
@@ -113,7 +130,7 @@ if(isset($gem_category)) {
 											?>
 												<div class="col-12 col-sm-6 col-md-6 col-lg-3 single-grid-product">
 													<div class="grid-product-image">
-														<!--												<span class="sale">35%</span>-->
+														
 														<a href="product_details.php?gc=<?php echo $gem_row["gem_category"]; ?>&gt=<?php echo $gem_row["gem_type"]; ?>&gem=<?php echo $gem_row["id"]; ?>"><img
 																src="<?php echo $gem_row['image1']; ?>"
 																alt="<?php echo $gem_row['name']; ?>"></a>
@@ -126,10 +143,10 @@ if(isset($gem_category)) {
 													</div>
 													<div class="grid-product-info">
 														<div class="price-box">
-															<span
-																class="regular-price"><?php echo $gem_row['price']; ?></span>
-															<span
-																class="sale-price"><?php echo $gem_row['offer_price']; ?></span>
+														<!--	<span
+																class="regular-price"><?php echo $gem_row['price']; ?></span> -->
+														<!--	<span
+																class="sale-price"><?php echo $gem_row['offer_price']; ?></span> -->
 														</div>
 														<?php echo $gem_row['name']; ?></a>
 														<p><?php echo $gem_row['weight']; ?></p>

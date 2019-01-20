@@ -4793,7 +4793,7 @@ a.dashboard-responsive-nav-trigger { display: none; }
 	margin: 0;
 }
 
-.dashboard-nav ul li ul li a { padding: 7px 0; }
+.dashboard-nav ul li ul li a { padding: 5px 0; }
 
 .dashboard-nav ul li ul li:hover {
 	color: #fff;

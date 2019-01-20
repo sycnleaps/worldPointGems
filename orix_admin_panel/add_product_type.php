@@ -17,6 +17,7 @@ if(isset($_POST['addGemType'])) {
 
 		// FILE UPLOAD
 		$target_upload_dir = "assets/img/types/";
+		console.log($target_upload_dir);
 
 		// IMAGE 01
 		$file_name1 = $_FILES['image']['name'];
@@ -37,6 +38,8 @@ if(isset($_POST['addGemType'])) {
 		$time_stamp = time();
 
 		$image1_location = $target_upload_dir . $product_name . $time_stamp . basename($file_name1);
+		console.log($image1_location);
+		console.log($file_tmp1);
 		move_uploaded_file($file_tmp1, "../" . $image1_location);
 
 		$sql = "INSERT INTO subcategory (mainCategory, name, description, small_description, image, popular_gem, exclusive_jewellery, created_date, updated_date) VALUES ('$gem_category','$name','$description','$small_description','$image1_location','$popular_gemstone','$exclusive_jewellery','$now','$now')";
@@ -60,7 +63,7 @@ if(isset($_POST['addGemType'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Admin Panel - World Point Gems</title>
+	<title>Admin Panel - Orix Gems and Jewellers</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="author" content="">

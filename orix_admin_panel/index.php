@@ -143,6 +143,8 @@ if(isset($_SESSION['uid']) && isset($_SESSION['admin'])) {
 											?>
 										</ul>
 									</li>
+									</BR>
+									</BR>
 									<li><a href="add_product.php"><i class="sl sl-icon-plus"></i> Add Products</a></li>
 <!--									<li><a href="add_product_type.php"><i class="sl sl-icon-plus"></i> Add Gem Types</a></li>-->
 <!--									<li><a href="change_password.html"><i class="sl sl-icon-lock"></i> Change Password</a></li>-->
